@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luas Lingkaran</title>
+</head>
+<body>
+  <script>
+    function calculateArea() {
+      const radius = document.getElementById('radius').value;
+
+      if (radius === '') {
+        document.getElementById('result').innerHTML = 'Error: Masukkan nilai radius.';
+      } else {
+        const area = Math.PI * radius ** 2;
+        document.getElementById('result').innerHTML = `Luas lingkaran dengan radius ${radius} yaitu ${area}.`;
+      }
+    }
+  </script>
+
+  <h1>Nama: Safarin A.S. Paputungan</h1>
+  <h1>NIM: 210211060065</h1>
+  <h1>TIK2032-F</h1>
+
+  <h2>Kalkulator Luas Lingkaran</h2>
+  <label for="radius">Radius:</label>
+  <input type="number" id="radius">
+  <button onclick="calculateArea()">Hitung</button>
+  <p id="result"></p>
+</body>
+</html>
