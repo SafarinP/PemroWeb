@@ -1,0 +1,14 @@
+<script>
+  const radius = 5;
+  const endpoint = `https://safarinp.github.io/PemroWeb/?radius=${radius}`;
+
+  fetch(endpoint)
+    .then(response => response.text())
+    .then(result => {
+      // Menampilkan hasil di elemen dengan id "result"
+      document.getElementById('result').innerHTML = result;
+    })
+    .catch(error => {
+      console.error('Terjadi kesalahan:', error);
+    });
+</script>
